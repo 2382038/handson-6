@@ -3,30 +3,30 @@ import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import ProductForm, { ProductFormInput } from "../components/ProductForm";
 import axios from "../utils/AxiosInstance";
-import { fetchProductDetail } from "./DetailProduct";
+import { fetchRecipeDetail } from "../pages/DetailsRecipes";
 
-const editProduct = async (data: ProductFormInput, id: string | undefined) => {
-  return await axios.put(`/products/${id}`, data);
-};
+const editRecipe = async (data: Recipe, id: string | undefined) => {
+    return await axios.put(`/recipes/${id}`, data);
+  };
 
-const EditProduct = () => {
+const EditRecipes = () => {
   const { id } = useParams();
-  const editProductMutation = useMutation({
-    mutationFn: (data: ProductFormInput) => editProduct(data, id)
+  const editRecipeMutation = useMutation({
+    mutationFn: (data: ProductFormInput) => editRecipe(data, id)
   });
-  const getProductDetail = useQuery({
-    queryKey: ["productDetail", id],
-    queryFn: () => fetchProductDetail(id)
+  const getRecipeDetail = useQuery({
+    queryKey: ["RecipeDetail", id],
+    queryFn: () => fetchRecipeDetail(id)
   });
   const navigate = useNavigate();
   useEffect(() => {
-    if (editProductMutation.isSuccess) {
-      navigate("/product", { replace: true });
+    if (editRecipeMutation.isSuccess) {
+      navigate("/recipes", { replace: true });
     }
-  }, [editProductMutation.isSuccess]);
+}, [editRecipeMutation.isSuccess]);
   return (
     <div className="relative">
-      {(editProductMutation.isPending || getProductDetail.isFetching) && (
+      {(editRecipeMutation.isPending || getRecipeDetail.isFetching) && (
         <div className="absolute inset-0 bg-white/50 backdrop-blur-sm z-10 flex items-center justify-center">
           <div className="flex items-center bg-white/90 px-6 py-3 rounded-lg shadow-lg">
             <span className="text-2xl mr-4 text-gray-800">Loading...</span>
