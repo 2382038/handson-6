@@ -51,7 +51,7 @@ const AddComment = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 font-medium mb-1">User ID</label>
+          <label className="block text-gray-700 font-medium mb-1">Post ID</label>
           <input
             type="number"
             value={postId}

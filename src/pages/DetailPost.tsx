@@ -73,7 +73,7 @@ const PostEdit = () => {
             onClick={() => updateMutation.mutate()}
             className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition"
           >
-            💾 Save
+            Save
           </button>
           <button
             onClick={() => {
@@ -83,7 +83,7 @@ const PostEdit = () => {
             }}
             className="bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition"
           >
-            ❌ Delete
+            Delete
           </button>
         </div>
       </div>
