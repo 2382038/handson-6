@@ -88,7 +88,7 @@ const TodoDetail = () => {
             onClick={() => updateMutation.mutate({ todo: todoText, completed })}
             className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition"
           >
-            💾 Save
+            Save
           </button>
           <button
             onClick={() => {
@@ -98,7 +98,7 @@ const TodoDetail = () => {
             }}
             className="bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition"
           >
-            ❌ Delete
+            Delete
           </button>
         </div>
       </div>

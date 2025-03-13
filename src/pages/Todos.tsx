@@ -75,7 +75,7 @@ const Todos = () => {
               <div className="flex-1">
                 <h2 className="text-2xl font-semibold text-gray-800">{todo.todo}</h2>
                 <p className={`mt-2 ${todo.completed ? "text-green-600" : "text-red-600"}`}>
-                  {todo.completed ? "Completed" : "Pending"}
+                  {todo.completed ? "Completed" : "Not Complete"}
                 </p>
               </div>
             </div>

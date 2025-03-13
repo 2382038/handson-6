@@ -55,7 +55,7 @@ const PostEdit = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6 flex items-center justify-center">
       <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xl text-center">
-        <h1 className="text-2xl font-bold text-gray-800">Edit Post</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Edit Todo</h1>
         <input
           type="text"
           value={title}
